@@ -1,0 +1,22 @@
+
+<ng-container *ngIf="newinput">
+<div class="notes">
+
+	<form [formGroup] = 'saved'>
+	<input type="text" placeholder="Title" type="text" formControlName="tit" class="title"/>
+
+	<textarea type="text"  class="no2"type="text" formControlName="txt"></textarea>
+
+	<button (click)="save()" class="cre"> Save </button>
+	</form>
+</div>
+
+<div style="width:100%;"><app-viewnotes></app-viewnotes>
+                                  </div>
+
+</ng-container>
+
+<ng-container *ngIf="!newinput">
+	<app-viewnotes [formValue]="texts" ></app-viewnotes>
+</ng-container>
+

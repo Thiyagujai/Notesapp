@@ -3,14 +3,13 @@
                                 <h1> Notesapp</h1>
                         </div>
                         <div class="log">
-
                                 <div class="white">
-
-
                          <h2> Login to your account </h2>
-	<input type="text" placeholder="Your Name"  [formControl]="Name"/> 
+<form [formGroup]="formgr" class="fo">
+	<input type="email" placeholder="Username"  [formControl]="Name"/> 
 	<input type="password" placeholder="YourPassword" [formControl]="Password"/>
 <button (click)="open()" class="but" routerLink="/firstpage" >Login</button>
-                                </div>
+</form>
+				</div>
                         </div>
 </div>

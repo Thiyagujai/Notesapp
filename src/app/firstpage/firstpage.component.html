@@ -4,21 +4,17 @@
 
 		<div class="align">
 
-			<div class="al">
-			<h3> Categories </h3>
-			<p> + </p>
-			</div>
-				<button (click)="adno()" class="an" >ViewNotes</button>
+			<h2>NotesApp</h2>
 
-			<div class="al2">
-			<p> Officetasks</p>
-			<p> Personal</p>
-			<p> Lifestyle</p>
-			</div>
+		<button (click)="navnote()" class = "an1">Create <fa-icon [icon] = "fap"></fa-icon> </button>
+		<button (click)="adno()" class="an1">SavedNotes</button>
+		<button class="an1">Categories</button>
+
 		</div>
 	</div>
 	<div style="width:100%">
-		<app-firsthalf [newinput]="fist"></app-firsthalf>
+		<app-firsthalf [newinput]="fist" [fresh]="creno"> </app-firsthalf>
+          
 	</div>
 
 </div>

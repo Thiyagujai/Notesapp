@@ -9,14 +9,23 @@ import {  FormGroup,FormControl,Validators } from '@angular/forms';
 export class HomepageComponent implements OnInit {
 	Name = new FormControl('');
 	 Password = new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(15)]   );
-open(){
+formgr:any;
+
+	 open(){
 console.log(this.Name.value);
 console.log(this.Password.value);
 }
-   
+ 
+/**profiles:any=[
+	
+	{ email:thiyagu@abc.com },
+	{ email:jai@abc.com },
+	];**/
+
   constructor() { }
 
   ngOnInit(): void {
+ 
   }
 
 }

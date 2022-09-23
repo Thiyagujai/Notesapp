@@ -11,15 +11,13 @@ export class ViewnotesComponent implements OnInit {
 @Input() noteValue:any;
 constructor() { }
   
-  title:any;
-  categories:any;
-  description:any;
+  displayingdata:any;
 
 
 
   ngOnInit(): void {
   
-this.title = this.noteValue.map((v:any)=>{
+this.displayingdata= this.noteValue.map((v:any)=>{
   		return v;
   })
 

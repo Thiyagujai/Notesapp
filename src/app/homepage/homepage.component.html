@@ -6,8 +6,8 @@
                                 <div class="white">
                          <h2> Login to your account </h2>
 <form [formGroup]="formgr" class="fo">
-	<input type="email" placeholder="Username"  [formControl]="Name"/> 
-	<input type="password" placeholder="YourPassword" [formControl]="Password"/>
+	<input type="email" placeholder="Username" id="name" formControlname="Name" required/>
+	<input type="password" placeholder="YourPassword" id="pasword" formControlname="Password"/>
 <button (click)="open()" class="but" routerLink="/firstpage" >Login</button>
 </form>
 				</div>

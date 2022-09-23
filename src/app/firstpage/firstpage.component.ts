@@ -9,20 +9,18 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./firstpage.component.scss']
 })
 export class FirstpageComponent implements OnInit {
-fap = faPlus;
-fist:boolean=false;
+fapl = faPlus;
+card:boolean=false;
 creno:boolean=false;
 
-
-adno(){
-this.fist = true;
+savednotes(){
+this.card = true;
 this.creno=false;
 }
 
-navnote(){
+create(){
+this.card = false;
 this.creno=true;
-this.fist = false;
-console.log("thi");
 }
   constructor() { }
 

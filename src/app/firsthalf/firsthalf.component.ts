@@ -9,32 +9,33 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./firsthalf.component.scss']
 })
 export class FirsthalfComponent implements OnInit {
-@Input() newinput:any;
-@Input() fresh:any;
+@Input() cardclick:any;
+@Input() creatingnotes:any;
+
 
 displayform:boolean=true;
 viewNotes:boolean=false;
 
-fap = faPlus;
-texts:any=[];
+fapl = faPlus;
+data:any=[];
 saved:any
 
 disf(){
 this.displayform=false;
-console.log("jai");
 }
 
 savedform (){
 this.saved= new FormGroup ({
-        tit:new FormControl(''),
-        ca:new FormControl(''),
-        txt:new FormControl(''),
+        title:new FormControl(''),
+        description:new FormControl(''),
+
 })
 };
 
 save(){
-this.texts.push(this.saved.value);
-console.log(this.texts);
+this.data.push(this.saved.value);
+console.log(this.data);
+this.saved.reset();
 }
 
 ngOnInit(): void {

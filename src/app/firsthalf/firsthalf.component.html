@@ -1,20 +1,20 @@
+
 <div class="notes">
 
-	 <ng-container *ngIf="texts.length===0 && displayform && !newinput && !fresh">
-        <button (click)="disf()"class="alert">Create <fa-icon [icon]="fap"></fa-icon></button>
+	<ng-container *ngIf="data.length===0 && displayform && !cardclick && !creatingnotes">
+        <button (click)="disf()"class="alert">Create <fa-icon [icon]="fapl"></fa-icon></button>
          </ng-container>
 	
-<ng-container *ngIf="(!displayform && !newinput) || fresh"  >
+<ng-container *ngIf="(!displayform && !cardclick && data.length===0) || creatingnotes ">
         <form [formGroup] = 'saved'>
-	<input type="text" placeholder="Title" formControlName="tit" class="title"/>
-        <input type="text" placeholder="Categories" formControlName="ca" class="categories"/>
-	<textarea type="text"  class="no2"type="text" formControlName="txt"></textarea>
+	<input type="text" placeholder="Title" formControlName="title" class="title"/>
+	<textarea type="text"  class="no2"type="text" formControlName="description"></textarea>
 	<button (click)="save()" class="cre"> Save </button>
 	</form>
 </ng-container>
 
-<ng-container *ngIf="newinput">
-        <app-viewnotes [noteValue]="texts"></app-viewnotes>
+<ng-container *ngIf="(cardclick || data.length!==0 && !displayform) && !creatingnotes">
+        <app-viewnotes [noteValue]="data"></app-viewnotes>
 </ng-container>
 </div>
 

@@ -10,8 +10,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FirstpageComponent }from './firstpage/firstpage.component';
 import { FirsthalfComponent } from './firsthalf/firsthalf.component';
 import { ViewnotesComponent } from './viewnotes/viewnotes.component';
+import { environment } from "src/environments/environment";
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
-@NgModule({
+ @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
@@ -25,7 +28,10 @@ import { ViewnotesComponent } from './viewnotes/viewnotes.component';
     AppRoutingModule,
     ReactiveFormsModule,
     CommonModule, 
-    FontAwesomeModule
+    FontAwesomeModule,
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]
